@@ -13,11 +13,6 @@ https://docs.google.com/document/d/1UegJTsqRF-mhT7Z0ZFCXiEuJ1Po5_gIpfl2ljtYso1I/
 
 
 
-## Rogue.json
-
-
-
-## Dungeon builder
 
 
 ## Special thanks
