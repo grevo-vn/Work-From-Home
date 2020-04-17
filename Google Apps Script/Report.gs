@@ -4,6 +4,8 @@ function CalculateTaskTime(userId, commandParamObject) {
   // 1. get data from google sheet "working time"
   var result = ProcessCaculateTaskTime(sheetName, commandParamObject['id']);
   
+  if (!result) return false;
+  
   // 2. insert data to google sheet "report"
   AddNewRowToReport(sheetName, result, commandParamObject);
 }
@@ -37,6 +39,8 @@ function ProcessCaculateTaskTime(sheetName, taskId) {
     if (startTime && endTime) break;
   }
   
+  if (startTime == "") return false;
+  
   var totalSpentTime = SpentTimeForTask(startTime, endTime, dateStartStr, dateEndStr) + " (task)";
   var result = {"date": dateEndStr, "totalSpentTime": totalSpentTime, "taskId": taskId};
   
@@ -48,6 +52,8 @@ function CalculateDailyWorkingTime(userId, commandParamObject) {
   
   // 1. get data from google sheet "working time"
   var result = ProcessStartTimeAndEndTimeToday(sheetName);
+  
+  if (!result) return false;
   
   // 2. insert data to google sheet "report"
   AddNewRowToReport(sheetName, result, commandParamObject);
@@ -62,10 +68,10 @@ function ProcessStartTimeAndEndTimeToday(sheetName) {
   var sheet  = sss.getSheetByName(sheetName);
   var values = sheet.getDataRange().getValues();
   
+  var dateStartStr = "";
+  var dateEndStr   = "";
   var startTime = "";
   var endTime   = "";
-  
-  var currentDate = GetCurrentDate('/');
 
   for(var i=values.length; i > 2; i--) {
     
@@ -73,22 +79,26 @@ function ProcessStartTimeAndEndTimeToday(sheetName) {
       
     var dateStr = Utilities.formatDate(new Date(values[i][1]), "GMT+7", "yyyy/MM/dd");
     
-    if(dateStr == currentDate && values[i][3] == "start") {
+    if(values[i][3] == "start") {
       startTime = Utilities.formatDate(new Date(values[i][2]), "GMT+7", "HH:mm");
+      dateStartStr = dateStr;
     }
     
-    if (endTime == '' && dateStr == currentDate && values[i][3] == "closed") {
+    if (endTime == '' && values[i][3] == "closed") {
       endTime = Utilities.formatDate(new Date(values[i][2]), "GMT+7", "HH:mm");
+      dateEndStr = dateStr;
     }
     
     if (startTime && endTime) break;
   }
   
-  startTime = currentDate + " " + startTime;
-  endTime   = currentDate + " " + endTime;
+  if (startTime == "") return false;
+  
+  startTime = dateStartStr + " " + startTime;
+  endTime   = dateEndStr + " " + endTime;
   
   var totalSpentTime = SpentTimeForDailyWorking(startTime, endTime) + " (daily)";
-  var result = {"date": currentDate, "totalSpentTime": totalSpentTime};
+  var result = {"date": dateEndStr, "totalSpentTime": totalSpentTime};
   
   return result;
 }

@@ -85,13 +85,28 @@ function doPost(e) {
     }
     
     if (userId && commandParamObject["command"] != 'task' && commandParamObject["command"] != 'task_end') {
-      ignoreChannel = e.parameter.channel_name;
-      postToSlack(messageRespone, dSlackUsers[userId]["channel"], ignoreChannel);
+      postToSlack(messageRespone, dSlackUsers[userId]["channel"]);
+    }
+    else {
+      var channelName = e.parameter.channel_name;
+      
+      if (channelName == "privategroup") {
+        if (typeof dPrivateGroups[e.parameter.channel_id] != "undefined") {
+          channelName = dPrivateGroups[e.parameter.channel_id];
+          postToSlack(messageRespone, [channelName]);
+        }
+        else {
+          // return error missing config for private group
+          return ContentService.createTextOutput(dMeasages["missing_config_private_group"]);
+        }
+      }
+      else {
+        postToSlack(messageRespone, [channelName]);
+      }
     }
     
   }
-  
-  return ContentService.createTextOutput(messageRespone);
+  return ContentService.createTextOutput();
 }
 
 function AddNewRow(listItemData, commandParameter, commandParamObject) {
@@ -101,6 +116,23 @@ function AddNewRow(listItemData, commandParameter, commandParamObject) {
     userId = commandParameter.user_id;
     if (typeof dSlackUsers[userId] == "undefined") {
       return dMeasages["missing_config_employee"];
+    }
+  
+    // check channel allow
+    var channelName = commandParameter.channel_name;
+    if (commandParameter.channel_name == "privategroup") 
+    {
+      if (typeof dPrivateGroups[commandParameter.channel_id] != "undefined") {
+        channelName = dPrivateGroups[commandParameter.channel_id];
+      }
+      else {
+        channelName = commandParameter.channel_id;
+      }
+    }
+    
+    var listChannel = dSlackUsers[userId]["channel"];
+    if (listChannel.indexOf(channelName) == -1) {
+      return dMeasages["not_allow_permission"];
     }
     
     messageRespone = dSlackUsers[userId]["employeeName"] + ": " + dCmd2Msg[command];
@@ -145,19 +177,7 @@ function AddNewRow(listItemData, commandParameter, commandParamObject) {
       sheet.getRange(rowInsert, 3).setValue(startTimeHM);
     }
   
-  
     sheet.getRange(rowInsert, 4).setValue(listItemData["status"]);
-  
-    var channelName = commandParameter.channel_name;
-    if (commandParameter.channel_name == "privategroup") 
-    {
-      if (typeof dPrivateGroups[commandParameter.channel_id] != "undefined") {
-        channelName = dPrivateGroups[commandParameter.channel_id];
-      }
-      else {
-        channelName = commandParameter.channel_id;
-      }
-    }
     sheet.getRange(rowInsert, 5).setValue(channelName);
   
     if (typeof listItemData['task'] != "undefined") {
@@ -165,6 +185,7 @@ function AddNewRow(listItemData, commandParameter, commandParamObject) {
       sheet.getRange(rowInsert, 8).setValue(message.trim());
     }
     sheet.getRange(rowInsert, 9).setValue(messageRespone);
+    sheet.getRange(rowInsert, 10).setValue(commandParameter.text);
   
   return '';
 }

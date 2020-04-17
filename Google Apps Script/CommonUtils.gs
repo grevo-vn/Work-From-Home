@@ -78,11 +78,15 @@ function SpentTimeForDailyWorking(startTime, endTime) {
   var minutes  = Math.floor(distance % 60);
   distance     = distance/60; 
   var hours    = Math.floor(distance % 24);
+  var days     = Math.floor(distance/24);
   
-  if (hours >= 5) hours = hours - 1;
-  
-  // return (hours * 60 + minutes);
-  return '' + (hours <= 9 ? '0' + hours : hours) + ":" + (minutes <= 9 ? '0' + minutes : minutes);
+  if (days > 0) {
+    hours = hours + (days * 24);
+    return '' + (hours <= 9 ? '0' + hours : hours) + ":" + (minutes <= 9 ? '0' + minutes : minutes);
+  } else {
+    if (hours >= 5) hours = hours - 1;
+    return '' + (hours <= 9 ? '0' + hours : hours) + ":" + (minutes <= 9 ? '0' + minutes : minutes);
+  }
 }
 
 function CreateNewSheetIfNotExist(sss, sheetName) {

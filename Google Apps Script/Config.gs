@@ -41,9 +41,16 @@ var dMeasages = {
   "task_missing_id": "Please input task id! Format: /wah task [id] -msg [strings]",
   "task_end_missing_id": "Please input task id! Format: /wah task_end [id] -msg [strings]",
   "missing_config_employee": "Configuration for this employee is empty!",
+  "missing_config_private_group": "Configuration for this private group is empty!",
+  "not_allow_permission": "You don't have permission to post command here! Please contact with administrator. Thank you.",
   "list_command": "List command: start|rest|rest_end|task [id]|task_end [id]|end|workout.\n Optional param: -date,-time,-msg,-complete_time.\n Ex: /wfh task 111 -date 2020/04/01 -time 14:30 -msg print Hello World."
 };
 
+/*
+* Config for private group
+* Example Private group url of "grevo_tsd_all_member": https://app.slack.com/client/TL22BAFPT/G01204EV5JM
+* G01204EV5JM is Channel ID, we use it as key of variable dPrivateGroups
+*/
 var dPrivateGroups = {
   "G01157TGVJB": "privateroom1"
 };
