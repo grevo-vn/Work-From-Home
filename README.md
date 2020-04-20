@@ -7,6 +7,8 @@
 - Google Apps Script
 </p>
 
+<img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/slack_slash_command.gif"/>
+
 ## User Manual
 - Set up: https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/SetUp.md
 - List slack command can use: https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/ListCommandCanUse.md
