@@ -88,7 +88,7 @@ Click "Add new Webhook to Workspace", to add "Slack Apps" to channel.<br/>
 <b>We have done to setup slack apps.</b><br/>
 
 
-## Set up Config,gs
+## Set up Config.gs
 
 Come back with Google Apps Script.<br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/GAS/config.png" width=300/><br/>
