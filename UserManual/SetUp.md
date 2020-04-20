@@ -71,6 +71,66 @@ And then Click button "Save".<br/>
 
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/install_apps_to_workspace.png" width=300/>
 
+4. Register Incoming WebHooks
+
+we need it to post message to channel<br/>
+<img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_incomming_webhook1.png" width=300/><br/>
+
+Click on link "Incomming Webhooks"<br/>
+<img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_incomming_webhook2.png" width=300/><br/>
+Turn On "Active Incomming Webhooks"<br/>
+
+<img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_incomming_webhook3.png" width=300 />
+<br/>
+Click "Add new Webhook to Workspace", to add "Slack Apps" to channel.<br/>
+<img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_incomming_webhook4.png" width=300 />
+<br/><br/>
+<b>We have done to setup slack apps.</b><br/>
+
+
+## Set up Config,gs
+
+Come back with Google Apps Script.<br/>
+<img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/GAS/config.png" width=300/><br/>
+We need to config for our environment.<br/>
+
+1. Update variable googleSheetWorkingTimeID and googleSheetReportID
+
+We can get that ID in URL of Google Sheet.
+
+2. Update information for variable dSlackUsers
+
+See examples as below:<br/>
+<pre>var dSlackUsers = {
+  "U010Q8EMU5P": {"employeeName": "Van Minh Tri", "sheetName": "Van Minh Tri", "channel": ["general", "random", "remote_helper_testing"]},
+…
+};
+</pre>
+
+<br/>
+<b>U010Q8EMU5P:</b> This is Slack User Id, Plese see how to get it in https://help.workast.com/hc/en-us/articles/360027461274-How-to-find-a-Slack-user-ID<br/>
+
+<b>employeeName:</b> Name of employee. <br/>
+
+<b>sheetName:</b> Name of sheet that will create automatic for employee. <br/>
+
+<b>Channel:</b> List channel that apps will post for this employee when they type command. <br/>
+
+
+3. Update information for variable dSlackChannels
+
+Come back slack apps setting: https://api.slack.com/apps <br/>
+Copy channel for key and Webhook URL for value.<br/>
+<img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_incomming_webhook3.png" width=300 /><br/>
+
+
+## Notice
+
+If you change anything in Apps Script editor, you need to publish it again.<br/>
+Choose Publish > Deploy as web app… <br/>
+In popup, choose Project version = “New”. And then click button Update.<br/>
+
+<img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/GAS/update_gas.png" width=300 /><br/>
 
 
 
