@@ -1,20 +1,21 @@
 ## Overview
-Free and easy to use.
-Tracking working time and tasks easy with some tools below:
+<p>Free and easy to use.</p>
+<p>Tracking working time and tasks easy with some tools below:
 
 - Slack
 - Google Sheet
 - Google Apps Script
-
+</p>
 
 ## User Manual
-
+- Set up: https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/SetUp.md
+- List slack command can use: https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/ListCommandCanUse.md
 
 
 
 ## Special thanks
-Ideal and manage project: Mr. Wataru Ishizuka
-Developer: Tri Van
+<p>Ideal and manage project: Mr. Wataru Ishizuka</p>
+<p>Developer: Tri Van</p>
 
 
 ## About us
