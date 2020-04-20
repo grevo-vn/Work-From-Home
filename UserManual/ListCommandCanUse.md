@@ -2,7 +2,7 @@
 
 List command avaiables: start | rest | rest_end | task [id] | task_end [id] | end | workout [mins]<br/>
 Optional param: -date, -time, -msg, -complete_time.<br/>
-Ex: /wfh task 111 -date 2020/04/01 -time 14:30 -msg print Hello World<br/></p>
+Example: /wfh task 111 -date 2020/04/01 -time 14:30 -msg print Hello World<br/>
 
 
 ## 1. Start new working day
@@ -36,7 +36,7 @@ Task id is required
 /wfh end -msg I finished today's work now!<br/>
 
 ## 7. Exercises
-// Work out 3 minutes with plank.
+// Work out 3 minutes with plank.<br/>
 /wfh workout 3 -msg plank!<br/>
 
 
