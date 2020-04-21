@@ -6,15 +6,15 @@ If you don't see "Google Apps Script", <br/>
 please click New --> More --> "Connect more apps", and then search with keyword "Google Apps Script".
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/GAS/create_new_gas.png" width=300/>
 
-Double click in new file, google will bring you to Apps Script Editor.<br/>
+a) Double click in new file, google will bring you to Apps Script Editor.<br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/GAS/config.png" width=300/>
 
-Create new 5 files in Apps Script Editor. Content of file, please get it in here: https://github.com/grevo-vn/Work-From-Home/tree/master/GoogleAppsScript
+b) Create new 5 files in Apps Script Editor. Content of file, please get it in here: https://github.com/grevo-vn/Work-From-Home/tree/master/GoogleAppsScript
 <br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/GAS/create_new_file.png" width=300/>
 <br/><br/><br/>
 
-<b>Deploy script as web app</b><br/>
+<b>c) Deploy script as web app</b><br/>
 Choose Publish --> Deploy as web app… <br/>
 Set Who has access to the app = “Anyone, even anonymous”<br/>
 And then click Deploy.<br/>
@@ -30,11 +30,11 @@ PS: If you want to distribute or update script, please see more information of G
 <br/><br/>
 #### 3. In folder WFH, create two files google sheet
 
-<b>WFH working time</b><br/>
+<b>a) WFH working time</b><br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/GoogleSheet/google_sheet_working_time.png" width=300/>
 <br/>
 
-<b>WFH report</b><br/>
+<b>b) WFH report</b><br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/GoogleSheet/google_sheet_report.png" width=300/>
 <br/>
 
@@ -56,12 +56,13 @@ P/S: More information about Slack Apps, you can find out in here https://api.sla
 
 #### 2. Set up Slash Command
 
+a) Click on "Slash Commands"<br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_slash_command1.png" width=300 /><br/>
-Click on "Slash Commands"<br/>
 
+b) Click button "Create New Command"<br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_slash_command2.png" width=300 /><br/>
-Click button "Create New Command"<br/>
 
+c) Setting command<br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_slash_command3.png" width=300 /><br/>
 
 <b>Command:</b> /wfh <br/>
@@ -77,16 +78,19 @@ And then Click button "Save".<br/>
 
 #### 4. Register Incoming WebHooks
 
-we need it to post message to channel<br/>
+we need it to post message to channel<br/><br/>
+
+a) Click on link "Incomming Webhooks"<br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_incomming_webhook1.png" width=300/><br/>
 
-Click on link "Incomming Webhooks"<br/>
+b) Turn On "Active Incomming Webhooks"<br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_incomming_webhook2.png" width=300/><br/>
-Turn On "Active Incomming Webhooks"<br/>
 
+c) Click "Add new Webhook to Workspace", to add "Slack Apps" to channel.<br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_incomming_webhook3.png" width=300 />
 <br/>
-Click "Add new Webhook to Workspace", to add "Slack Apps" to channel.<br/>
+
+d) Choose channel that you want post message<br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_incomming_webhook4.png" width=300 />
 <br/><br/>
 <b>We have done to setup slack apps.</b><br/>
@@ -111,13 +115,13 @@ We can get that ID in URL of Google Sheet.
 </pre>
 
 <br/>
-<b>U010Q8EMU5P:</b> This is Slack User Id, Plese see how to get it in https://help.workast.com/hc/en-us/articles/360027461274-How-to-find-a-Slack-user-ID<br/>
+<b>a) U010Q8EMU5P:</b> This is Slack User Id, Plese see how to get it in https://help.workast.com/hc/en-us/articles/360027461274-How-to-find-a-Slack-user-ID<br/>
 
-<b>userName:</b> Name of User. <br/>
+<b>b) userName:</b> Name of User. <br/>
 
-<b>sheetName:</b> Name of sheet in google sheet that will create automatic for user. <br/>
+<b>c) sheetName:</b> Name of sheet in google sheet that will create automatic for user. <br/>
 
-<b>Channel:</b> List channel that apps will post for this user when they type command. <br/>
+<b>d) channel:</b> List channel that apps will post for this user when they type command. <br/>
 
 
 #### 3. Update information for variable dSlackChannels
