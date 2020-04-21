@@ -1,15 +1,16 @@
 ## Init source in google drive
 #### 1. Access https://drive.google.com/ and create new folder WFH
-#### 2. In folder WFH, we will create new file Google Apps Script.
+#### 2. In folder WFH, we will create new file Google Apps Script
 
 If you don't see "Google Apps Script", <br/>
 please click New --> More --> "Connect more apps", and then search with keyword "Google Apps Script".
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/GAS/create_new_gas.png" width=300/>
 
-a) Double click in new file, google will bring you to Apps Script Editor.<br/>
+<b>a) Double click in new file, google will bring you to Apps Script Editor</b><br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/GAS/config.png" width=300/>
 
-b) Create new 5 files in Apps Script Editor. Content of file, please get it in here: https://github.com/grevo-vn/Work-From-Home/tree/master/GoogleAppsScript
+<b>b) Create new 5 files in Apps Script Editor</b><br/>
+Content of file, please get it in here: https://github.com/grevo-vn/Work-From-Home/tree/master/GoogleAppsScript
 <br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/GAS/create_new_file.png" width=300/>
 <br/><br/><br/>
@@ -27,7 +28,6 @@ Answer: We need it as a web server that will receive response from slack, save d
 
 PS: If you want to distribute or update script, please see more information of Google Apps Script in https://developers.google.com/apps-script
 
-<br/><br/>
 #### 3. In folder WFH, create two files google sheet
 
 <b>a) WFH working time</b><br/>
@@ -56,13 +56,13 @@ P/S: More information about Slack Apps, you can find out in here https://api.sla
 
 #### 2. Set up Slash Command
 
-a) Click on "Slash Commands"<br/>
+<b>a) Click on "Slash Commands"</b><br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_slash_command1.png" width=300 /><br/>
 
-b) Click button "Create New Command"<br/>
+<b>b) Click button "Create New Command"</b><br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_slash_command2.png" width=300 /><br/>
 
-c) Setting command<br/>
+<b>c) Setting command</b><br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_slash_command3.png" width=300 /><br/>
 
 <b>Command:</b> /wfh <br/>
@@ -80,17 +80,17 @@ And then Click button "Save".<br/>
 
 we need it to post message to channel<br/><br/>
 
-a) Click on link "Incomming Webhooks"<br/>
+<b>a) Click on link "Incomming Webhooks"</b><br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_incomming_webhook1.png" width=300/><br/>
 
-b) Turn On "Active Incomming Webhooks"<br/>
+<b>b) Turn On "Active Incomming Webhooks"</b><br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_incomming_webhook2.png" width=300/><br/>
 
-c) Click "Add new Webhook to Workspace", to add "Slack Apps" to channel.<br/>
+<b>c) Click "Add new Webhook to Workspace", to add "Slack Apps" to channel</b><br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_incomming_webhook3.png" width=300 />
 <br/>
 
-d) Choose channel that you want post message<br/>
+<b>d) Choose channel that you want post message</b><br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_incomming_webhook4.png" width=300 />
 <br/><br/>
 <b>We have done to setup slack apps.</b><br/>
