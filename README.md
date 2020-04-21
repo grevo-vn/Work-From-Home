@@ -11,6 +11,7 @@
 
 ## User Manual
 - Set up: https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/SetUp.md
+- Process flow: https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Process_Flow.md
 - List slack command can use: https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/ListCommandCanUse.md
 
 
