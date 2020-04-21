@@ -1,6 +1,6 @@
 ## Init source in google drive
-1. Access https://drive.google.com/ and create new folder WFH
-2. In folder WFH, we will create new file Google Apps Script.
+#### 1. Access https://drive.google.com/ and create new folder WFH
+#### 2. In folder WFH, we will create new file Google Apps Script.
 
 If you don't see "Google Apps Script", <br/>
 please click New --> More --> "Connect more apps", and then search with keyword "Google Apps Script".
@@ -28,7 +28,7 @@ Answer: We need it as a web server that will receive response from slack, save d
 PS: If you want to distribute or update script, please see more information of Google Apps Script in https://developers.google.com/apps-script
 
 <br/><br/>
-3. In folder WFH, create two files google sheet
+#### 3. In folder WFH, create two files google sheet
 
 <b>WFH working time</b><br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/GoogleSheet/google_sheet_working_time.png" width=300/>
@@ -42,10 +42,11 @@ PS: If you want to distribute or update script, please see more information of G
 Please set name of first sheet is "Template". We need it to clone new sheet for new employee.<br/>
 And take a look on URL, you will see "Google Sheet ID".<br/><br/>
 
-Congratulation! We are almost done for this part.<br/>
+<b>Congratulation! We are almost done for this part.</b><br/>
+<b>We will come back with "Google Apps Script file" again to update the configuaration after we set up slack apps.</b><br/>
 
 ## Set up Slack Apps
-1. Create new slack apps
+#### 1. Create new slack apps
 
 Go to https://api.slack.com/apps?new_app=1 <br/>
 Enter your "App Name", choose "Slack Workspace" and then click button "Create App" <br/>
@@ -53,7 +54,7 @@ Enter your "App Name", choose "Slack Workspace" and then click button "Create Ap
 
 P/S: More information about Slack Apps, you can find out in here https://api.slack.com/start/overview<br/>
 
-2. Set up Slash Command
+#### 2. Set up Slash Command
 
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_slash_command1.png" width=300 /><br/>
 Click on "Slash Commands"<br/>
@@ -70,11 +71,11 @@ Click button "Create New Command"<br/>
 
 And then Click button "Save".<br/>
 
-3. Add Slack Apps to WorkSpace
+#### 3. Add Slack Apps to WorkSpace
 
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/install_apps_to_workspace.png" width=300/>
 
-4. Register Incoming WebHooks
+#### 4. Register Incoming WebHooks
 
 we need it to post message to channel<br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_incomming_webhook1.png" width=300/><br/>
@@ -97,15 +98,14 @@ Come back with Google Apps Script.<br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/GAS/config.png" width=300/><br/>
 We need to config for our environment.<br/>
 
-1. Update variable googleSheetWorkingTimeID and googleSheetReportID
+#### 1. Update variable googleSheetWorkingTimeID and googleSheetReportID
 
 We can get that ID in URL of Google Sheet.
 
-2. Update information for variable dSlackUsers
+#### 2. Update information for variable dSlackUsers
 
-See examples as below:<br/>
 <pre>var dSlackUsers = {
-  "U010Q8EMU5P": {"employeeName": "Van Minh Tri", "sheetName": "Van Minh Tri", "channel": ["general", "random", "remote_helper_testing"]},
+  "U010Q8EMU5P": {"userName": "Van Minh Tri", "sheetName": "Van Minh Tri", "channel": ["general", "random", "remote_helper_testing"]},
 …
 };
 </pre>
@@ -113,14 +113,14 @@ See examples as below:<br/>
 <br/>
 <b>U010Q8EMU5P:</b> This is Slack User Id, Plese see how to get it in https://help.workast.com/hc/en-us/articles/360027461274-How-to-find-a-Slack-user-ID<br/>
 
-<b>employeeName:</b> Name of employee. <br/>
+<b>userName:</b> Name of User. <br/>
 
-<b>sheetName:</b> Name of sheet in google sheet that will create automatic for employee. <br/>
+<b>sheetName:</b> Name of sheet in google sheet that will create automatic for user. <br/>
 
-<b>Channel:</b> List channel that apps will post for this employee when they type command. <br/>
+<b>Channel:</b> List channel that apps will post for this user when they type command. <br/>
 
 
-3. Update information for variable dSlackChannels
+#### 3. Update information for variable dSlackChannels
 
 Come back slack apps setting: https://api.slack.com/apps <br/>
 Copy channel for key and Webhook URL for value.<br/>
