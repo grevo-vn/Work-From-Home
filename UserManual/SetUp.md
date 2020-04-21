@@ -22,6 +22,9 @@ And then click Deploy.<br/>
 Copy "Current web app URL", we will use it for "Slack Apps".
 <br/><br/><br/>
 
+<b>Question: Why we need a Google Apps Script file?<br/>
+Answer: We need it as a web server that will receive response from slack, save data to google sheet and post message to some groups in slack. </b><br/><br/>
+
 PS: If you want to distribute or update script, please see more information of Google Apps Script in https://developers.google.com/apps-script
 
 <br/><br/>
@@ -112,7 +115,7 @@ See examples as below:<br/>
 
 <b>employeeName:</b> Name of employee. <br/>
 
-<b>sheetName:</b> Name of sheet that will create automatic for employee. <br/>
+<b>sheetName:</b> Name of sheet in google sheet that will create automatic for employee. <br/>
 
 <b>Channel:</b> List channel that apps will post for this employee when they type command. <br/>
 
