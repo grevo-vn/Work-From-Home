@@ -97,9 +97,9 @@ function CreateNewSheetIfNotExist(sss, sheetName) {
   sss.setActiveSheet(sss.getSheetByName(sheetName));
   sss.moveActiveSheet(1);
   
-  // set employee information
-  if (typeof dSlackUsers[userId]["employeeName"] != "undefined") {
-    sheet.getRange(1,2).setValue(dSlackUsers[userId]["employeeName"]);
+  // set user information
+  if (typeof dSlackUsers[userId]["userName"] != "undefined") {
+    sheet.getRange(1,2).setValue(dSlackUsers[userId]["userName"]);
   }
   
   if (typeof dSlackUsers[userId]["department"] != "undefined") {

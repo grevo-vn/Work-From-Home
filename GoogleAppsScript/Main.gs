@@ -115,7 +115,7 @@ function AddNewRow(listItemData, commandParameter, commandParamObject) {
   
     userId = commandParameter.user_id;
     if (typeof dSlackUsers[userId] == "undefined") {
-      return dMeasages["missing_config_employee"];
+      return dMeasages["missing_config_user"];
     }
   
     // check channel allow
@@ -135,10 +135,10 @@ function AddNewRow(listItemData, commandParameter, commandParamObject) {
       return dMeasages["not_allow_permission"];
     }
     
-    messageRespone = dSlackUsers[userId]["employeeName"] + ": " + dCmd2Msg[command];
+    messageRespone = dSlackUsers[userId]["userName"] + ": " + dCmd2Msg[command];
     
     if (command == "task" || command == "task_end") {
-      messageRespone = dSlackUsers[userId]["employeeName"] + ": " + dCmd2Msg[command] + " " + listItemData['task'];
+      messageRespone = dSlackUsers[userId]["userName"] + ": " + dCmd2Msg[command] + " " + listItemData['task'];
       
       if (message.trim()) {
           messageRespone += ". " + dMeasages["txt_detail"] + ":";
@@ -146,7 +146,7 @@ function AddNewRow(listItemData, commandParameter, commandParamObject) {
     }
   
     if (command == "workout") {
-      messageRespone = dSlackUsers[userId]["employeeName"] + ": " + dCmd2Msg[command] + " " + listItemData['task'] + " " + dMeasages["txt_minute"] + ".";
+      messageRespone = dSlackUsers[userId]["userName"] + ": " + dCmd2Msg[command] + " " + listItemData['task'] + " " + dMeasages["txt_minute"] + ".";
     }
   
     messageRespone += " " + message.trim();

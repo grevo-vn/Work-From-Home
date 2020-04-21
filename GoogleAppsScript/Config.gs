@@ -13,8 +13,8 @@ var googleSheetReportID = "1hnKXeP2AqAz6sobg.................jRqnqqZ9UHsbhI";
 * How to find a Slack user ID: https://help.workast.com/hc/en-us/articles/360027461274-How-to-find-a-Slack-user-ID
 */
 var dSlackUsers = {
-  "U010Q8EMU5P": {"employeeName": "Van Minh Tri", "sheetName": "Van Minh Tri", "channel": ["general", "random", "remote_helper_testing"], "department": "TSD", "projects": "Work At Home"},
-  "U010NQQ6RS7": {"employeeName": "Ishizuka Wataru", "sheetName": "Ishizuka Wataru", "channel": ["general", "random", "remote_helper_testing"], "department": "TSD", "projects": "Work At Home"}
+  "U010Q8EMU5P": {"userName": "Van Minh Tri", "sheetName": "Van Minh Tri", "channel": ["general", "random", "remote_helper_testing"], "department": "TSD", "projects": "Work At Home"},
+  "U010NQQ6RS7": {"userName": "Ishizuka Wataru", "sheetName": "Ishizuka Wataru", "channel": ["general", "random", "remote_helper_testing"], "department": "TSD", "projects": "Work At Home"}
 };
 
 // Message By Command
@@ -40,7 +40,7 @@ var dMeasages = {
   "txt_minute": "minutes",
   "task_missing_id": "Please input task id! Format: /wah task [id] -msg [strings]",
   "task_end_missing_id": "Please input task id! Format: /wah task_end [id] -msg [strings]",
-  "missing_config_employee": "Configuration for this employee is empty!",
+  "missing_config_user": "Configuration for this user is empty!",
   "missing_config_private_group": "Configuration for this private group is empty!",
   "not_allow_permission": "You don't have permission to post command here! Please contact with administrator. Thank you.",
   "list_command": "List command: start|rest|rest_end|task [id]|task_end [id]|end|workout.\n Optional param: -date,-time,-msg,-complete_time.\n Ex: /wfh task 111 -date 2020/04/01 -time 14:30 -msg print Hello World."
