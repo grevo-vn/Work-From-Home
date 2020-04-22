@@ -1,4 +1,4 @@
-It is a free tool to check the status when employee work from home.
+This is a free tool to check the status of work when the member works from home.
 
 1) Define slack user and list channels that user wants to automatically post, etc. (Config.gs)
 
