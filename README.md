@@ -9,7 +9,7 @@
 
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/slack_slash_command.gif"/>
 
-## User Manual
+## User manual
 
 ### English version
 - [Set up](https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/SetUp.md)
