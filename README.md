@@ -18,7 +18,7 @@
 
 ### Japanese version
 - [WFH APP 動作仕様](https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/WFH%20APP%20%E5%8B%95%E4%BD%9C%E4%BB%95%E6%A7%98.pdf)
-- [WFH APPのセットアップ](https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/WFH%20APP%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97.pdf)
+- [WFH APP セットアップガイド](https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/WFH%20APP%20%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%82%AC%E3%82%A4%E3%83%89.pdf)
 
 
 
