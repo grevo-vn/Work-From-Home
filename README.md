@@ -10,9 +10,15 @@
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/slack_slash_command.gif"/>
 
 ## User Manual
-- Set up: https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/SetUp.md
-- Process flow: https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Process_Flow.md
-- List slack command can use: https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/ListCommandCanUse.md
+
+### English version
+- [Set up](https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/SetUp.md)
+- [Process flow](https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Process_Flow.md)
+- [List slack command can use](https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/ListCommandCanUse.md)
+
+### Japanese version
+- [WFH APP 動作仕様](https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/WFH%20APP%20%E5%8B%95%E4%BD%9C%E4%BB%95%E6%A7%98.pdf)
+- [WFH Appsのセットアップ](https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/WFH%20Apps%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97.pdf)
 
 
 
