@@ -37,3 +37,6 @@ personnel allocation, training, and security systems that are personalized to yo
 <a href="https://grevo.net/en/">GREVO Co., Ltd.</a>
 
 <img src="https://avatars1.githubusercontent.com/u/38648506?s=400&u=f44686b53316366a52efa47cc30907eccda47a80&v=4" width="100" align="right">
+
+## License
+See the [LICENSE](https://github.com/grevo-vn/Work-From-Home/blob/master/LICENSE.md) file for license rights and limitations (MIT).
