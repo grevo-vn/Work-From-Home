@@ -133,14 +133,19 @@ Copy channel for key and Webhook URL for value.<br/>
 
 ## Notice
 
-If you change anything in Apps Script editor, you need to publish it again.<br/>
+1) If you change anything in Apps Script editor, you need to publish it again.<br/>
 Choose Publish > Deploy as web app… <br/>
 In popup, choose Project version = “New”. And then click button Update.<br/>
 
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/GAS/update_gas.png" width=300 /><br/>
 
+2) Issues
 
-
+When you run /wfh commands, Slackbot sometimes returns an error saying "operation_timeout".<br/>
+This happens because Slack presumes it failed when the command takes over 3 seconds to respond, and then Slackbot sends the message automatically.<br/>
+So, even that error shows up, the script of WFH APP works correctly.<br/>
+<img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Issues/operation_timeout.png" width=400 /><br/>
+You'll find your /wfh command runs without a failure in your channel.<br/>
 
 
 
