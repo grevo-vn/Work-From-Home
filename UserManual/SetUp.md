@@ -139,8 +139,7 @@ In popup, choose Project version = “New”. And then click button Update.<br/>
 
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/GAS/update_gas.png" width=300 /><br/>
 
-2) Issues
-
+2) Issues<br/>
 When you run /wfh commands, Slackbot sometimes returns an error saying "operation_timeout".<br/>
 This happens because Slack presumes it failed when the command takes over 3 seconds to respond, and then Slackbot sends the message automatically.<br/>
 So, even that error shows up, the script of WFH APP works correctly.<br/>
