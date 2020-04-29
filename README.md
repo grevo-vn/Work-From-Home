@@ -12,13 +12,14 @@
 ## User manual
 
 ### English version
-- [Set up](https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/SetUp.md)
-- [Process flow](https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Process_Flow.md)
-- [List slack command can use](https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/ListCommandCanUse.md)
+- [WFH_APP_Process_Flow_en](https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/WFH_APP_Process_Flow_en.pdf)
+- [WFH_APP_SetUp_Guide_en](https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/WFH_APP_SetUp_Guide_en.pdf)
+- [Command_List_en](https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Command_List_en.pdf)
 
 ### Japanese version
-- [WFH APP 動作仕様](https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/WFH%20APP%20%E5%8B%95%E4%BD%9C%E4%BB%95%E6%A7%98.pdf)
-- [WFH APP セットアップガイド](https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/WFH%20APP%20%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%82%AC%E3%82%A4%E3%83%89.pdf)
+- [WFH_APP_Process_Flow_jp](https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/WFH_APP_Process_Flow_jp.pdf)
+- [WFH_APP_SetUp_Guide_jp](https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/WFH_APP_SetUp_Guide_jp.pdf)
+- [Command_List_jp](https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Command_List_jp.pdf)
 
 
 
