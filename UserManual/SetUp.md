@@ -1,3 +1,7 @@
+# Create slack apps WFH with slack bot, slack slash command and google apps script
+Writer: Van Minh Tri
+Date: 2020-07-08
+
 ## Init source in google drive
 #### 1. Access https://drive.google.com/ and create new folder WFH
 #### 2. In folder WFH, we will create new file Google Apps Script
