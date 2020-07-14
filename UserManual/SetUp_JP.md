@@ -49,21 +49,20 @@ c) 完成したスクリプトをウェブアプリとして公開します。
 「導入」をクリックすることで、ウェブアプリとしての利用準備が完了します。<br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/GAS/deploy_as_web_app.png" width=500><br/>
 導入完了後に表示される「現在のウェブアプリケーションのURL」は、後ほど
+Slack Apps の設定で必要になるので、コピーやメモしておきましょう。<br/><br/>
 
-Slack Apps の設定で必要になるので、コピーやメモしておきましょう。
-
-※GAS（Google Apps Script）を利用する理由について
+※GAS（Google Apps Script）を利用する理由について<br/>
 
 Slackからの入力を受信・データをスプレッドシートに保管・出力し、Slackへの投稿を
 することが目的です。これらに必要なサーバとしての役割、アプリとしての役割を一手
 に担うことができるため、広く利用されているGoogle Accountとの親和性も高いGAS
-を利用しています。
+を利用しています。<br/>
 
 スクリプトを改修したい場合は、GASの開発者向け情報をご参照ください。
-https://developers.google.com/apps-script
+https://developers.google.com/apps-script<br/><br/>
 
 #### 3. スプレッドシートを新規作成
-「WFH」フォルダ内に 2 種類のスプレッドシートを作成します。
+「WFH」フォルダ内に 2 種類のスプレッドシートを作成します。<br/>
 
 a) WFH working time<br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/GoogleSheet/google_sheet_working_time.png" width=500/><br/>
@@ -74,14 +73,13 @@ b) WFH report<br/>
 Notice:
 
 新たなメンバーが追加される際、シートを複製して使う前提のため、一番左のシート名
-を「Template」にします。
+を「Template」にします。<br/>
 
-以上でセットアップ前の準備は完了となります。
+以上でセットアップ前の準備は完了となります。<br/>
 
 このままではアプリは機能しませんが、後の工程で再びGASに戻ってスクリプトを編
-
 集します。その際、ここで作成したスプレッドシート 2 種類のID（URL上の d/ と /edit
-の間の文字列）が必要になります。
+の間の文字列）が必要になります。<br/>
 
 
 ## Part 2. Slack Apps セットアップ
@@ -89,11 +87,11 @@ Notice:
 #### 1. Slack Apps を新規作成する
 
 Web版SlackのSlack Apps設定ページ (​https://api.slack.com/apps?new_app=1​) にアクセ
-スし、必要な情報を埋めていきます。
+スし、必要な情報を埋めていきます。<br/>
 
 「App Name」 にアプリ名を入れ、「Development Slack Workspac」" にはアプリを利
 用したいワークスペースを選択します。最後に "Create App" をクリックすれば、Slack
-内で稼働できるアプリが作成されます。
+内で稼働できるアプリが作成されます。<br/>
 
 以降の工程で、アプリをインストールしたり、機能やコマンドを追加していきます。<br/>
 <img src="https://a.slack-edge.com/80588/img/api/start/app_creation_dialog.png" width=500/><br/>
@@ -118,13 +116,14 @@ c) コマンド設定に必要な情報を入力します。<br/>
 Command
 「/wfh」と入力します。（どのコマンドで起動するかを設定）
 
+<br/>
 Request URL
 セットアップ準備​の項目で新規作成した Google Apps Script の「現在のウェブ
-アプリケーションのURL」 を入力します。
+アプリケーションのURL」 を入力します。<br/>
 
 Short Description
 アプリの説明です。Slack 上で他のユーザーの目にも触れるので、分かりやすい
-内容が推奨されます。
+内容が推奨されます。<br/>
 
 Usage Hint
 その他使えるコマンドがあれば、ユーザーガイドとして記載できます。
@@ -136,8 +135,8 @@ Usage Hint
 ・task [ID] -msg [文字列]
 ・task_end [ID] -msg [文字列]
 ・end -msg [文字列]
-
-最後に「Save」をクリックすれば、コマンドの設定は完了です。
+<br/>
+最後に「Save」をクリックすれば、コマンドの設定は完了です。<br/>
 
 
 #### 3. Slack Apps をワークスペースに追加する
@@ -148,7 +147,7 @@ Usage Hint
 
 #### 4. WebHook を登録する
 文言を各チャンネルに投稿するために、Webhook（特定のコマンド実行などによっ
-て、指定されたURLにデータを追記する仕組み）を設定します。
+て、指定されたURLにデータを追記する仕組み）を設定します。<br/>
 
 
 a) 「Add features and functionality」にある「Incoming Webhooks」をクリック。<br/>
@@ -163,7 +162,7 @@ c) 「Add new Webhook to Workspace」をクリックして、Slackのどのチ�
 
 d) 作業状況を投稿したいチャンネルを選択し、「Allow」をクリックします。<br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_incomming_webhook4.png" width=500 /><br/>
-以上でSlack Appsでの設定は完了です。次に、アプリの機能を編集します。
+以上でSlack Appsでの設定は完了です。次に、アプリの機能を編集します。<br/>
 
 
 ## Part 3. Config.gs セットアップ
@@ -175,8 +174,7 @@ Google Apps Script を再度開き、Slack Apps で設定したコマンドが�
 
 #### 1. スプレッドシート ID を指定する
 以下の変数に、​セットアップ準備​で新規作成した対応するスプレッドシートのIDを代入
-
-します。（IDはスプレッドシートURLの ~d/......./edit で挟まれた箇所の文字列）
+します。（IDはスプレッドシートURLの ~d/......./edit で挟まれた箇所の文字列）<br/>
 
 var googleSheetWorkingTimeID = "WFH working time シートのID"
 var googleSheetReportID = "WFH report シートのID"
@@ -187,7 +185,7 @@ var googleSheetReportID = "WFH report シートのID"
 ※アプリの動作不良を避けるために、JavaScriptまたはGAS習得者による入力を推奨。
 
 必要な情報としては、①SlackユーザーID、②利用者名、③利用チャンネル名（複数
-可）の 3 種類になります。
+可）の 3 種類になります。<br/>
 
 var dSlackUsers = {...} のカッコ内に、以下のフォーマットで入力します。
 
@@ -208,28 +206,21 @@ Minh Tri", "channel": ["general", "random",
 "channel": ["general", "random", "remote_helper_testing"]},
 ...
 };
-
+<br/>
 ① SlackユーザーIDの取得
-
-
-Slackのアカウントプロフィールから確認できます。
+Slackのアカウントプロフィールから確認できます。<br/>
 
 ② userName
-
-
-ユーザー名を入力します。
+ユーザー名を入力します。<br/>
 
 sheetName
-
-
-ここで入力した値がスプレッドシート上で自動的に出力されます。
+ここで入力した値がスプレッドシート上で自動的に出力されます。<br/>
 
 ③ channel
+コマンドを入力した際に投稿が行われるチャンネルを指定します。<br/>
 
-コマンドを入力した際に投稿が行われるチャンネルを指定します。
 
-
-#### 3. Webhook URL** の反映
+#### 3. Webhook URL の反映
 変数 dSlackChannels にアプリを動かすチャンネルとWebhookの情報を入力します。
 ※アプリの動作不良を避けるために、JavaScriptまたはGAS習得者による入力を推奨。
 
@@ -245,9 +236,9 @@ var dSlackChannels = {...} のカッコ内に、以下のフォーマットで�
 
 "Channel名": "WebhookのURL"
 
+<br/>
 同じカッコ内で、カンマで区切って同じフォーマットを追加すれば、複数チャン
-
-ネル分の情報を追記できます。
+ネル分の情報を追記できます。<br/>
 
 var dSlackChannels = {
 "general": "https://hooks.slack.com/services/ABC...jklm1",
@@ -259,22 +250,21 @@ var dSlackChannels = {
 
 ## Part 4. 諸注意
 
-スクリプトを編集した際は、再度公開するまでその編集内容は反映されません。
+スクリプトを編集した際は、再度公開するまでその編集内容は反映されません。<br/>
 
 セットアップ準備の時と同じく、ツールバーから「公開」→「ウェブアプリケーション
-
-として導入...」と選択していきます。
+として導入...」と選択していきます。<br/>
 
 ポップアップ内で 「プロジェクトパージョン」を「新規作成」にし、「更新」をク
-
 リックすることで内容が反映されます。<br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/GAS/update_gas.png" width=500 /><br/>
 
 
 また、実際にSlack上で /wfh コマンドを実行した際、operation_timeout というエラー
-ログが返ってくることがあります。
+ログが返ってくることがあります。<br/>
+
 これはSlackの仕様によるもので、コマンド実行から 3 秒が経過すると、実行に失敗し
-たと内部で判定され、Slackbotが自動的にメッセージを送信するために発生します。
+たと内部で判定され、Slackbotが自動的にメッセージを送信するために発生します。<br/>
 
 実際のスクリプト上は問題なくコマンドが機能しているので、WFH APP の動作に影響
 はありません。<br/>
