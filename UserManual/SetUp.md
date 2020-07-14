@@ -2,9 +2,17 @@
 Writer: Van Minh Tri
 Date: 2020-07-08
 
-## Init source in google drive
-#### 1. Access https://drive.google.com/ and create new folder WFH
-#### 2. In folder WFH, we will create new file Google Apps Script
+## Introduction
+
+- Tracking working time and tasks easy with some free tools: Slack, Google Sheet, Google Apps Script
+- Easy to install and use.
+
+
+## Part 1. Init source in Google Drive
+#### 1. Create new folder in Google Drive
+Access https://drive.google.com/ and create new folder WFH
+
+#### 2. Create new file Google Apps Script
 
 If you don't see "Google Apps Script", <br/>
 please click New --> More --> "Connect more apps", and then search with keyword "Google Apps Script".
@@ -32,7 +40,8 @@ Answer: We need it as a web server that will receive response from slack, save d
 
 PS: If you want to distribute or update script, please see more information of Google Apps Script in https://developers.google.com/apps-script
 
-#### 3. In folder WFH, create two files google sheet
+#### 3. Create two files Google Sheet
+In folder WFH, we will create two file Google Sheet:
 
 <b>a) WFH working time</b><br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/GoogleSheet/google_sheet_working_time.png" width=300/>
@@ -49,8 +58,8 @@ And take a look on URL, you will see "Google Sheet ID".<br/><br/>
 <b>Congratulation! We are almost done for this part.</b><br/>
 <b>We will come back with "Google Apps Script file" again to update the configuaration after we set up slack apps.</b><br/>
 
-## Set up Slack Apps
-#### 1. Create new slack apps
+## Part 2. Set up Slack Apps
+#### 1. Create new Slack Apps
 
 Go to https://api.slack.com/apps?new_app=1 <br/>
 Enter your "App Name", choose "Slack Workspace" and then click button "Create App" <br/>
@@ -100,7 +109,7 @@ we need it to post message to channel<br/><br/>
 <b>We have done to setup slack apps.</b><br/>
 
 
-## Set up Config.gs
+## Part 3. Set up Config.gs
 
 Come back with Google Apps Script.<br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/GAS/config.png" width=300/><br/>
@@ -135,7 +144,7 @@ Copy channel for key and Webhook URL for value.<br/>
 <img src="https://github.com/grevo-vn/Work-From-Home/blob/master/UserManual/Setup/SlackApps/setup_incomming_webhook3.png" width=300 /><br/>
 
 
-## Notice
+## Part 4. Notice
 
 1) If you change anything in Apps Script editor, you need to publish it again.<br/>
 Choose Publish > Deploy as web app… <br/>
